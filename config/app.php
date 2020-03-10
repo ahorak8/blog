@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => 'http://blog.local',
 
     /*
     |--------------------------------------------------------------------------
@@ -107,7 +107,7 @@ return [
     |
     */
 
-    'key' => 'base64:i1/M3p5JSPCBIbI5o8dE0YW0MOMRgyvDfyIZEE+5/fQ=',
+    'key' => 'EtesXaykMPZijUKMpnDSXkP1IRKO7ZJj',
 
     'cipher' => 'AES-256-CBC',
 

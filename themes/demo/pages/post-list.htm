@@ -1,0 +1,63 @@
+title = "Post List"
+url = "/post-list"
+layout = "default"
+is_hidden = 0
+
+[builderList postList]
+modelClass = "Ahorak\BlogSite\Models\Post"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "post_title"
+noRecordsMessage = "No records found"
+detailsPage = "post"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+==
+{% set records = postList.records %}
+{% set displayColumn = postList.displayColumn %}
+{% set noRecordsMessage = postList.noRecordsMessage %}
+{% set detailsPage = postList.detailsPage %}
+{% set detailsKeyColumn = postList.detailsKeyColumn %}
+{% set detailsUrlParameter = postList.detailsUrlParameter %}
+
+<div class="column"> 
+<ul class="record-list">
+    {% for record in records %}
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+                {% endif %}
+
+                <h2>{{ attribute(record, displayColumn) }}</h2>
+
+                {% if detailsPage %}
+                    </a>
+                    <p> {{ record.date_posted }} </p>
+                {% endif %}
+            {% endspaceless %}
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>
+</div>
+
+{% if records.lastPage > 1 %}
+    <ul class="pagination">
+        {% if records.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..records.lastPage %}
+            <li class="{{ records.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if records.lastPage > records.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

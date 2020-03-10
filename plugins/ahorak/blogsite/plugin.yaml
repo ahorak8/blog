@@ -1,0 +1,20 @@
+plugin:
+    name: 'ahorak.blogsite::lang.plugin.name'
+    description: 'ahorak.blogsite::lang.plugin.description'
+    author: ahorak
+    icon: oc-icon-edit
+    homepage: ''
+navigation:
+    BlogSites:
+        label: 'Blog Sites'
+        url: ahorak/blogsite/posts
+        icon: icon-edit
+        sideMenu:
+            posts:
+                label: Posts
+                url: ahorak/blogsite/posts
+                icon: icon-edit
+            side-menu-item:
+                label: Categories
+                url: ahorak/blogsite/category
+                icon: icon-sitemap

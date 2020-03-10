@@ -1,0 +1,25 @@
+title = "Post"
+url = "/post/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails postDetails]
+modelClass = "Ahorak\BlogSite\Models\Post"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "post_title"
+notFoundMessage = "Record not found"
+==
+{% set record = postDetails.record %}
+<!-- {% set displayColumn = postDetails.displayColumn %} -->
+{% set notFoundMessage = postDetails.notFoundMessage %}
+
+<div>
+    {% if record %}
+        <!-- {{ attribute(record, displayColumn) }} -->
+        <h2>{{record.post_title}} </h2>
+        {{ record.content | raw}}
+    {% else %}
+        {{ notFoundMessage }}
+    {% endif %}
+</div>

@@ -1,0 +1,19 @@
+fields:
+    post_title:
+        label: 'Post Title'
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        type: text
+    date_posted:
+        label: 'Date Posted'
+        mode: date
+        span: auto
+        type: datepicker
+    content:
+        label: Content
+        size: ''
+        span: full
+        type: richeditor

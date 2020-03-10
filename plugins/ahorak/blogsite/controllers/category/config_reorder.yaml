@@ -1,0 +1,4 @@
+title: Category
+modelClass: Ahorak\BlogSite\Models\Category
+toolbar:
+    buttons: reorder_toolbar

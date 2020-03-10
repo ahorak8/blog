@@ -1,0 +1,4 @@
+title: Posts
+modelClass: Ahorak\BlogSite\Models\Post
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: Posts
+form: $/ahorak/blogsite/models/post/fields.yaml
+modelClass: Ahorak\BlogSite\Models\Post
+defaultRedirect: ahorak/blogsite/posts
+create:
+    redirect: 'ahorak/blogsite/posts/update/:id'
+    redirectClose: ahorak/blogsite/posts
+update:
+    redirect: ahorak/blogsite/posts
+    redirectClose: ahorak/blogsite/posts

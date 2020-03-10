@@ -1,0 +1,10 @@
+columns:
+    post_title:
+        label: 'Post TItle'
+        type: text
+        searchable: true
+        sortable: true
+    date_posted:
+        label: 'Date Posted'
+        type: date
+        sortable: true

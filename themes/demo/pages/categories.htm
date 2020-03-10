@@ -1,0 +1,17 @@
+title = "Categories"
+url = "/categories"
+layout = "default"
+is_hidden = 0
+
+[builderList categoryList]
+modelClass = "Ahorak\BlogSite\Models\Category"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "category_name"
+noRecordsMessage = "No records found"
+detailsPage = "category"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+{% component 'categoryList' %}

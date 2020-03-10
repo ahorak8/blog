@@ -1,0 +1,10 @@
+name: Category
+form: $/ahorak/blogsite/models/category/fields.yaml
+modelClass: Ahorak\BlogSite\Models\Category
+defaultRedirect: ahorak/blogsite/category
+create:
+    redirect: 'ahorak/blogsite/category/update/:id'
+    redirectClose: ahorak/blogsite/category
+update:
+    redirect: ahorak/blogsite/category
+    redirectClose: ahorak/blogsite/category

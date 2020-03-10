@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table ahorak_blogsite_category'
+    - builder_table_create_ahorak_blogsite_category.php
+1.0.3:
+    - 'Updated table ahorak_blogsite_category'
+    - builder_table_update_ahorak_blogsite_categories.php
+1.0.4:
+    - 'Created table ahorak_blogsite_posts'
+    - builder_table_create_ahorak_blogsite_posts.php
+1.0.5:
+    - 'Created table ahorak_blogsite_posts_categories'
+    - builder_table_create_ahorak_blogsite_posts_categories.php
+1.0.6:
+    - 'Updated table ahorak_blogsite_posts'
+    - builder_table_update_ahorak_blogsite_posts.php
